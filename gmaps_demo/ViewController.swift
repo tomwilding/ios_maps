@@ -1,93 +1,44 @@
 import UIKit
-import GoogleMaps
-import GooglePlaces
+import MapKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
-    var mapView: GMSMapView!
-    var placesClient: GMSPlacesClient!
-    var zoomLevel: Float = 18.0
     
-    // A default location to use when location permission is not granted.
-    let defaultLocation = CLLocation(latitude: -33.8523341, longitude: 151.2106085)
+    var resultSearchController:UISearchController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Initialize the location manager.
-        locationManager = CLLocationManager()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.distanceFilter = 50
-        locationManager.startUpdatingLocation()
-        locationManager.delegate = self
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager = CLLocationManager()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.distanceFilter = 50
+            locationManager.startUpdatingLocation()
+            locationManager.delegate = self
+        }
         
-        placesClient = GMSPlacesClient.shared()
-        
-        // Create a map.
-        let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
-                                              longitude: defaultLocation.coordinate.longitude,
-                                              zoom: zoomLevel)
-        mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        // Add the map to the view, hide it until we've got a location update.
-        view.addSubview(mapView)
-        mapView.isHidden = true
-    }
-    
-    // Add markers for the places nearby the device.
-    func updateMarkers() {
-        mapView.clear()
-        
-        // Get nearby places and add markers to the map.
-        placesClient.currentPlace(callback: { (placeLikelihoods, error) -> Void in
-            if let error = error {
-                print("Current Place error: \(error.localizedDescription)")
-                return
-            }
-            
-            if let likelihoodList = placeLikelihoods {
-                for likelihood in likelihoodList.likelihoods {
-                    let place = likelihood.place
-                    
-                    let marker = GMSMarker(position: place.coordinate)
-                    marker.title = place.name
-                    marker.snippet = place.formattedAddress
-                    marker.map = self.mapView
-                }
-            }
-        })
     }
     
 }
 
 // Delegates to handle events for the location manager.
 extension ViewController: CLLocationManagerDelegate {
-    
+
     // Handle incoming location events.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location: CLLocation = locations.last!
-        print("Location: \(location)")
-        
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
-                                              longitude: location.coordinate.longitude,
-                                              zoom: zoomLevel)
-        
-        if mapView.isHidden {
-            mapView.isHidden = false
-            mapView.camera = camera
-        } else {
-            mapView.animate(to: camera)
+        if let location = locations.first {
+            // Set view center and region
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpanMake(0.05, 0.05))
+            self.mapView.setRegion(region, animated: true)
         }
-        
-        updateMarkers()
     }
-    
+
     // Handle authorization for the location manager.
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
@@ -104,11 +55,11 @@ extension ViewController: CLLocationManagerDelegate {
             print("Location status is OK.")
         }
     }
-    
+
     // Handle location manager errors.
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
         print("Error: \(error)")
     }
-    
+
 }

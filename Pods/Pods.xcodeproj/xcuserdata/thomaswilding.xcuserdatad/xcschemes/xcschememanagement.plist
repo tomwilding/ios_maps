@@ -3,20 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict>
-		<key>Pods-gmaps_demo.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-	</dict>
+	<dict/>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>99094543FF4C6BF09E627C929EB9850B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
