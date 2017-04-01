@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81245E951E299BFC00D2CE0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81245E941E299BFC00D2CE0A /* MapKit.framework */; };
+		814039941E8D98B300672E42 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814039931E8D98B300672E42 /* LocationSearchTable.swift */; };
 		817936B21E7D6C0900B7294A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817936B01E7D6C0900B7294A /* Main.storyboard */; };
 		81954CD11E2985540009CB9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81954CD01E2985540009CB9F /* AppDelegate.swift */; };
 		81954CD31E2985540009CB9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81954CD21E2985540009CB9F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		81245E941E299BFC00D2CE0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		814039931E8D98B300672E42 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		817936B11E7D6C0900B7294A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81954CCD1E2985540009CB9F /* gmaps_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gmaps_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81954CD01E2985540009CB9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				81954CD21E2985540009CB9F /* ViewController.swift */,
 				81954CD71E2985540009CB9F /* Assets.xcassets */,
 				81954CDC1E2985540009CB9F /* Info.plist */,
+				814039931E8D98B300672E42 /* LocationSearchTable.swift */,
 			);
 			path = gmaps_demo;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814039941E8D98B300672E42 /* LocationSearchTable.swift in Sources */,
 				81954CD31E2985540009CB9F /* ViewController.swift in Sources */,
 				81954CD11E2985540009CB9F /* AppDelegate.swift in Sources */,
 			);
