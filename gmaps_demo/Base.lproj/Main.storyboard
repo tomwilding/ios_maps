@@ -176,7 +176,7 @@
         <!--View Controller-->
         <scene sceneID="KAf-xN-Ihk">
             <objects>
-                <viewController id="Z0J-l8-98A" customClass="ViewController" customModule="gmaps_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapView" id="Z0J-l8-98A" customClass="ViewController" customModule="gmaps_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GFu-fh-OSW"/>
                         <viewControllerLayoutGuide type="bottom" id="x6g-JT-Ybo"/>

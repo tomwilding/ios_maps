@@ -13,13 +13,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Add Facebook Login button
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.center = view.center
-        
-        view.addSubview(loginButton)
-        
+            // Add Facebook Login button
+            let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+            loginButton.center = view.center
+            
+            view.addSubview(loginButton)
     }
     
 }

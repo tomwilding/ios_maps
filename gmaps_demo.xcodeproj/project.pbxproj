@@ -11,6 +11,7 @@
 		81245E951E299BFC00D2CE0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81245E941E299BFC00D2CE0A /* MapKit.framework */; };
 		814039941E8D98B300672E42 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814039931E8D98B300672E42 /* LocationSearchTable.swift */; };
 		814039961E8FD7F000672E42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814039951E8FD7F000672E42 /* LoginViewController.swift */; };
+		814039981E90031900672E42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 814039971E90031900672E42 /* Default-568h@2x.png */; };
 		817936B21E7D6C0900B7294A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817936B01E7D6C0900B7294A /* Main.storyboard */; };
 		81954CD11E2985540009CB9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81954CD01E2985540009CB9F /* AppDelegate.swift */; };
 		81954CD31E2985540009CB9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81954CD21E2985540009CB9F /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		81245E941E299BFC00D2CE0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		814039931E8D98B300672E42 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		814039951E8FD7F000672E42 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		814039971E90031900672E42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		817936B11E7D6C0900B7294A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81954CCD1E2985540009CB9F /* gmaps_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gmaps_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81954CD01E2985540009CB9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		81954CC41E2985540009CB9F = {
 			isa = PBXGroup;
 			children = (
+				814039971E90031900672E42 /* Default-568h@2x.png */,
 				81954CCF1E2985540009CB9F /* gmaps_demo */,
 				81954CCE1E2985540009CB9F /* Products */,
 				4C4ABD2254683B4C8E40AB98 /* Pods */,
@@ -165,6 +168,7 @@
 			files = (
 				81954CD81E2985540009CB9F /* Assets.xcassets in Resources */,
 				817936B21E7D6C0900B7294A /* Main.storyboard in Resources */,
+				814039981E90031900672E42 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +357,7 @@
 				INFOPLIST_FILE = gmaps_demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.gmaps-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tc.maps-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -375,7 +379,7 @@
 				INFOPLIST_FILE = gmaps_demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.gmaps-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tc.maps-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
