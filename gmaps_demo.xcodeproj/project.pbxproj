@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		224FEF699B420370DDB67602 /* Pods_gmaps_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D47D1C383611A301D6AC5BD /* Pods_gmaps_demo.framework */; };
+		811E1DF91EA26F59006AB888 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E1DF81EA26F59006AB888 /* ProfileViewController.swift */; };
 		81245E951E299BFC00D2CE0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81245E941E299BFC00D2CE0A /* MapKit.framework */; };
 		814039941E8D98B300672E42 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814039931E8D98B300672E42 /* LocationSearchTable.swift */; };
 		814039961E8FD7F000672E42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814039951E8FD7F000672E42 /* LoginViewController.swift */; };
@@ -21,10 +22,12 @@
 /* Begin PBXFileReference section */
 		602B2220BCB69633265C4A35 /* Pods-gmaps_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gmaps_demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-gmaps_demo/Pods-gmaps_demo.release.xcconfig"; sourceTree = "<group>"; };
 		7D47D1C383611A301D6AC5BD /* Pods_gmaps_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gmaps_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		811E1DF81EA26F59006AB888 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		81245E941E299BFC00D2CE0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		814039931E8D98B300672E42 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		814039951E8FD7F000672E42 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		814039971E90031900672E42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		814039991EA044BA00672E42 /* gmaps_demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gmaps_demo.entitlements; sourceTree = "<group>"; };
 		817936B11E7D6C0900B7294A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81954CCD1E2985540009CB9F /* gmaps_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gmaps_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81954CD01E2985540009CB9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		81954CCF1E2985540009CB9F /* gmaps_demo */ = {
 			isa = PBXGroup;
 			children = (
+				814039991EA044BA00672E42 /* gmaps_demo.entitlements */,
 				817936B01E7D6C0900B7294A /* Main.storyboard */,
 				81954CD01E2985540009CB9F /* AppDelegate.swift */,
 				81954CD21E2985540009CB9F /* ViewController.swift */,
@@ -94,6 +98,7 @@
 				81954CD71E2985540009CB9F /* Assets.xcassets */,
 				81954CDC1E2985540009CB9F /* Info.plist */,
 				814039931E8D98B300672E42 /* LocationSearchTable.swift */,
+				811E1DF81EA26F59006AB888 /* ProfileViewController.swift */,
 			);
 			path = gmaps_demo;
 			sourceTree = "<group>";
@@ -136,6 +141,9 @@
 						DevelopmentTeam = FK8HQ2ZEXD;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 0;
 							};
@@ -229,6 +237,7 @@
 			files = (
 				814039961E8FD7F000672E42 /* LoginViewController.swift in Sources */,
 				814039941E8D98B300672E42 /* LocationSearchTable.swift in Sources */,
+				811E1DF91EA26F59006AB888 /* ProfileViewController.swift in Sources */,
 				81954CD31E2985540009CB9F /* ViewController.swift in Sources */,
 				81954CD11E2985540009CB9F /* AppDelegate.swift in Sources */,
 			);
@@ -346,6 +355,7 @@
 			baseConfigurationReference = 99509326431CEDDC0EB7F517 /* Pods-gmaps_demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = gmaps_demo/gmaps_demo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FK8HQ2ZEXD;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -368,6 +378,7 @@
 			baseConfigurationReference = 602B2220BCB69633265C4A35 /* Pods-gmaps_demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = gmaps_demo/gmaps_demo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FK8HQ2ZEXD;
 				FRAMEWORK_SEARCH_PATHS = (

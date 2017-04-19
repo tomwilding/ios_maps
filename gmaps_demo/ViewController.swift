@@ -1,5 +1,7 @@
 import UIKit
 import MapKit
+import FacebookCore
+import FacebookLogin
 
 protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
