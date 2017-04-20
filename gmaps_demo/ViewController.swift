@@ -10,6 +10,8 @@ protocol HandleMapSearch {
 class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     
@@ -47,6 +49,14 @@ class ViewController: UIViewController {
             
             // Handle incomming Map Searches
             locationSearchTable.handleMapSearchDelegate = self
+        }
+        
+        // SWReveal for sliding menu
+        if revealViewController() != nil {
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
     }

@@ -9,7 +9,7 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 
-class ProfileViewController: UIViewController {
+class FiltersViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -24,11 +24,6 @@ class ProfileViewController: UIViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        // Add facebook login button
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.center = view.center
-            
-        view.addSubview(loginButton)
     }
     
 }
