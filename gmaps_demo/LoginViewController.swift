@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
             
         } else {
             print("user logged out")
-            let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+            let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
             loginButton.center = view.center
             
             view.addSubview(loginButton)
