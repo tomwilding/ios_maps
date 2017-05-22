@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
                 }
             }
             connection.start()
-            
+
         } else {
             print("user logged out")
             let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])

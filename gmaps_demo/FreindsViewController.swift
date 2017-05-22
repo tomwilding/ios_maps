@@ -35,6 +35,8 @@ class FriendsViewController: UIViewController {
                 case .success(let response):
                     print("Graph Request Succeeded: \(response)")
                     // Friends that have authorised the app
+                    // let jsonObject = [{"name": "Marily Nika","id": "500657435"},{"name": "Shahin Mir","id": "611545254"}]
+                    
                 case .failed(let error):
                     print("Graph Request Failed: \(error)")
                 }
